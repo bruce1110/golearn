@@ -6,7 +6,12 @@ import (
 	"github.com/fvbock/endless"
 	"bruce.net/Servers/middleware"
 	"bruce.net/Servers/router"
+	"bruce.net/Servers/run"
 )
+
+func init() {
+	run.Init()
+}
 
 func main() {
 	w := sync.WaitGroup{}

@@ -57,7 +57,7 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:91969bfae1d94ae36e85299e1807dad44106e9709d00a82602445143cab3fa37"
+  digest = "1:64092aa16b3ada3fc2a8603117a9a6e21feaaae68bfbff0c5acfe983bcc01c42"
   name = "github.com/gin-gonic/gin"
   packages = [
     ".",
@@ -66,7 +66,15 @@
     "render",
   ]
   pruneopts = "UT"
-  revision = "cce49582d617333c72f4d86abd8ef0e62eb778a0"
+  revision = "f67d7a90c4d2e5bdf310a78d7e6a04e3d9aee851"
+
+[[projects]]
+  digest = "1:ec6f9bf5e274c833c911923c9193867f3f18788c461f76f05f62bb1510e0ae65"
+  name = "github.com/go-sql-driver/mysql"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "72cd26f257d44c1114970e19afddcd812016007e"
+  version = "v1.4.1"
 
 [[projects]]
   digest = "1:4c0989ca0bcd10799064318923b9bc2db6b4d6338dd75f3f2d86c3511aaaf5cf"
@@ -167,14 +175,14 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:dc994e65c6a07e9611daa4e20788561c1aa72ab9d600eb7c843f55311a9c157c"
+  digest = "1:64e0841d16eede64fa7c457573955c25a793d98d46a0b8be6f3c1bac7b3d45b8"
   name = "golang.org/x/lint"
   packages = [
     ".",
     "golint",
   ]
   pruneopts = "UT"
-  revision = "c67002cb31c3a748b7688c27f20d8358b4193582"
+  revision = "93c0bb5c83939f89e6238cefd42de38f33734409"
 
 [[projects]]
   branch = "master"
@@ -189,15 +197,15 @@
     "trace",
   ]
   pruneopts = "UT"
-  revision = "351d144fa1fc0bd934e2408202be0c29f25e35a0"
+  revision = "610586996380ceef02dd726cc09df7e00a3f8e56"
 
 [[projects]]
   branch = "master"
-  digest = "1:9399de11945e643d7131cf070736122b76800d92d57a80494bd9a4e73e6979f3"
+  digest = "1:391d584c32997a99b556d2ed9e0333464a2eef452dceba43f8ef65d4bc78731a"
   name = "golang.org/x/sys"
   packages = ["unix"]
   pruneopts = "UT"
-  revision = "a5c9d58dba9a56f97aaa86f55e638b718c5a6c42"
+  revision = "73d4af5aa059c8c2dfcf25aad4efd6ce7bc9adc1"
 
 [[projects]]
   digest = "1:a2ab62866c75542dd18d2b069fec854577a20211d7c0ea6ae746072a1dccdd18"
@@ -233,7 +241,15 @@
     "go/types/typeutil",
   ]
   pruneopts = "UT"
-  revision = "22934f0fdb6201c132a3dc6120150dcb1646d74c"
+  revision = "49db546f375eee2dbfef045773161e6a4ea59c2f"
+
+[[projects]]
+  digest = "1:c25289f43ac4a68d88b02245742347c94f1e108c534dda442188015ff80669b3"
+  name = "google.golang.org/appengine"
+  packages = ["cloudsql"]
+  pruneopts = "UT"
+  revision = "4a4468ece617fc8205e99368fa2200e9d1fad421"
+  version = "v1.3.0"
 
 [[projects]]
   branch = "master"
@@ -305,6 +321,7 @@
   input-imports = [
     "github.com/fvbock/endless",
     "github.com/gin-gonic/gin",
+    "github.com/go-sql-driver/mysql",
   ]
   solver-name = "gps-cdcl"
   solver-version = 1
