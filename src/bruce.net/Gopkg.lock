@@ -40,6 +40,17 @@
   revision = "447134032cb6a86814f570257390a379982dfc61"
 
 [[projects]]
+  digest = "1:0594af97b2f4cec6554086eeace6597e20a4b69466eb4ada25adf9f4300dddd2"
+  name = "github.com/garyburd/redigo"
+  packages = [
+    "internal",
+    "redis",
+  ]
+  pruneopts = "UT"
+  revision = "a69d19351219b6dd56f274f96d85a7014a2ec34e"
+  version = "v1.6.0"
+
+[[projects]]
   branch = "master"
   digest = "1:36fe9527deed01d2a317617e59304eb2c4ce9f8a24115bcc5c2e37b3aee5bae4"
   name = "github.com/gin-contrib/sse"
@@ -185,27 +196,28 @@
   revision = "93c0bb5c83939f89e6238cefd42de38f33734409"
 
 [[projects]]
-  branch = "master"
-  digest = "1:3ef99daebef641def7ca865fd0eae93c006c17cbc3a254b66dc1b98c31a89054"
+  branch = "release-branch.go1.10"
+  digest = "1:677a5d026fcc0c1e764f2d688a363316e3b157cec39b8fbaa0c1a1796aac3643"
   name = "golang.org/x/net"
   packages = [
-    "http/httpguts",
+    "context",
     "http2",
     "http2/hpack",
     "idna",
     "internal/timeseries",
+    "lex/httplex",
     "trace",
   ]
   pruneopts = "UT"
-  revision = "610586996380ceef02dd726cc09df7e00a3f8e56"
+  revision = "0ed95abb35c445290478a5348a7b38bb154135fd"
 
 [[projects]]
-  branch = "master"
-  digest = "1:391d584c32997a99b556d2ed9e0333464a2eef452dceba43f8ef65d4bc78731a"
+  branch = "release-branch.go1.11"
+  digest = "1:33a43cb31975899cfcd81600d1390467db1778ae87102f80668a753fed8c663e"
   name = "golang.org/x/sys"
   packages = ["unix"]
   pruneopts = "UT"
-  revision = "73d4af5aa059c8c2dfcf25aad4efd6ce7bc9adc1"
+  revision = "98c5dad5d1a0e8a73845ecc8897d0bd56586511d"
 
 [[projects]]
   digest = "1:a2ab62866c75542dd18d2b069fec854577a20211d7c0ea6ae746072a1dccdd18"
@@ -231,17 +243,17 @@
   version = "v0.3.0"
 
 [[projects]]
-  branch = "master"
-  digest = "1:da76817708f332e4a6a161581de588bbd420d020e976759408b3321f39f1a48d"
+  branch = "release-branch.go1.10"
+  digest = "1:cbd6dc2c371b5a0a14d15277e6a7bcffec5da7c7eab913ee83e1a3ca2a661fe2"
   name = "golang.org/x/tools"
   packages = [
     "go/ast/astutil",
     "go/gcexportdata",
-    "go/internal/gcimporter",
+    "go/gcimporter15",
     "go/types/typeutil",
   ]
   pruneopts = "UT"
-  revision = "49db546f375eee2dbfef045773161e6a4ea59c2f"
+  revision = "156d532d4f67148ceab07c3b59ed7fa13bdbf00c"
 
 [[projects]]
   digest = "1:c25289f43ac4a68d88b02245742347c94f1e108c534dda442188015ff80669b3"
@@ -320,6 +332,7 @@
   analyzer-version = 1
   input-imports = [
     "github.com/fvbock/endless",
+    "github.com/garyburd/redigo/redis",
     "github.com/gin-gonic/gin",
     "github.com/go-sql-driver/mysql",
   ]
