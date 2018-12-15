@@ -19,10 +19,11 @@ func Test(c *gin.Context) {
 		c.JSON(401, gin.H{"err": "请输入正确uid"})
 		return
 	}
-	nickname,_ := model.GetOne(p.Userid)
+	nickname, nick2, _ := model.GetOne(p.Userid)
 	c.Abort()
 	c.JSON(200, gin.H{
 		"test":     "ok",
 		"nickname": nickname,
+		"nick2":    nick2,
 	})
 }

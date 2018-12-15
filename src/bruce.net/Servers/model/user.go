@@ -1,11 +1,15 @@
 package model
 
-func GetOne(uid uint64) (string,error) {
+import (
+	"github.com/garyburd/redigo/redis"
+)
+
+func GetOne(uid uint64) (string, string, error) {
 	sql := "select nickname from user_1 where uid = ?";
 	var name string
-	err := Db.QueryRow(sql, uid).Scan(&name)
-	if err != nil {
-		return err.Error(),err
-	}
-	return name,nil
+	Db.QueryRow(sql, uid).Scan(&name)
+	rc := Pool.Get()
+	defer rc.Close()
+	value, _ := redis.String(rc.Do("GET", "test"))
+	return name, value, nil
 }
